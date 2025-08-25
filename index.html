@@ -56,7 +56,7 @@
         border-radius: 12px;
         padding: 10px;
         font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-        font-size: 12px;
+        font-size: 16px;
         outline: none;
       }
       textarea:focus {
@@ -186,26 +186,42 @@
 
         const maxY = Math.max(0, ...y);
         const layout = {
-          margin: { l: 70, r: 20, t: 10, b: 50 },
+          margin: { l: 70, r: 20, t: 10, b: 60 },
           xaxis: {
             title: {
-              text: "Retention time",
-              standoff: 10,
-              font: { family: "Arial, Helvetica, sans-serif" },
+              text: "Retention time (min)",
+              standoff: 32,
+              font: { family: "Arial, Arial, sans-serif", size: 24 },
             },
-            tickfont: { family: "Arial, Helvetica, sans-serif" },
+            tickfont: { family: "Arial, Arial, sans-serif", size: 18 },
             zeroline: false,
+            showline: true,
+            linecolor: "#000",
+            linewidth: 2,
+            ticks: "outside",
+            tickcolor: "#000",
+            tickwidth: 1,
+            ticklen: 6,
+            zeroline: false, // optional: hide horizontal zero line
           },
           yaxis: {
             title: {
               text: "Intensity",
-              standoff: 15,
-              font: { family: "Arial, Helvetica, sans-serif" },
+              standoff: 16,
+              font: { family: "Arial, Arial, sans-serif", size: 24 },
             },
-            tickfont: { family: "Arial, Helvetica, sans-serif" },
+            tickfont: { family: "Arial, Arial, sans-serif", size: 18 },
             rangemode: "tozero",
             separatethousands: true,
             automargin: true,
+            showline: true,
+            linecolor: "#000",
+            linewidth: 2,
+            ticks: "outside",
+            tickcolor: "#000",
+            tickwidth: 1,
+            ticklen: 6,
+            zeroline: false, // optional: hide horizontal zero line
           },
           paper_bgcolor: "#ffffff",
           plot_bgcolor: "#ffffff",
