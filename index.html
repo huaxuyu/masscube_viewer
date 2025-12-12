@@ -10,35 +10,43 @@
         padding: 60px;
         text-align: center;
       }
+
       h1 {
         font-size: 32px;
         margin-bottom: 20px;
       }
+
       p {
         font-size: 18px;
         color: #555;
         margin-bottom: 40px;
       }
+
       .btn-container {
         display: flex;
         justify-content: center;
         gap: 40px;
         flex-wrap: wrap;
       }
+
       .tool-btn {
-        background: #4519f6ff;
+        background: #662ffeff;
         color: white;
         padding: 18px 34px;
         font-size: 20px;
         border-radius: 12px;
-        border: none;
-        cursor: pointer;
         text-decoration: none;
-        display: inline-block;
+        cursor: pointer;
         width: 260px;
         font-weight: 600;
         transition: 0.15s ease;
+
+        /* ⭐ NEW: vertically + horizontally centers text */
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+
       .tool-btn:hover {
         background: #9a9af5ff;
         transform: translateY(-2px);
@@ -46,18 +54,19 @@
       }
     </style>
   </head>
+
   <body>
     <h1>MassCube Web Tools</h1>
     <p>Select a tool to begin:</p>
 
     <div class="btn-container">
-      <a class="tool-btn" href="peak_viewer.html">
-        Peak Shape Viewer (RT vs Intensity)
+      <a class="tool-btn" href="feature_table_viewer.html">
+        Aligned Feature Table Viewer
       </a>
 
-      <a class="tool-btn" href="cosine_similarity.html">
-        MS/MS Mirror Plot & Similarity
-      </a>
+      <a class="tool-btn" href="peak_viewer.html"> Peak Shape Viewer </a>
+
+      <a class="tool-btn" href="cosine_similarity.html"> MS/MS Viewer </a>
     </div>
   </body>
 </html>
